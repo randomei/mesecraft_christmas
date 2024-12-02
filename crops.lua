@@ -1,7 +1,10 @@
 -- PEPPERMINT
+
+local S = mesecraft_christmas.translator
+
 	-- Peppermint Leaf
 	minetest.register_craftitem("mesecraft_christmas:peppermint", {
-		description = "Peppermint Leaf",
+		description = S("Peppermint Leaf"),
 		inventory_image = "mesecraft_christmas_crops_peppermint_leaf.png",
 		groups = {food_peppermint = 1, flammable = 2},
 		on_use = minetest.item_eat(3),
@@ -9,7 +12,7 @@
 
 	-- Peppermint Seeds
 	minetest.register_node("mesecraft_christmas:peppermint_seeds", {
-		description = "Peppermint Seeds",
+		description = S("Peppermint Seeds"),
 		tiles = {"mesecraft_christmas_crops_peppermint_seeds.png"},
 		inventory_image = "mesecraft_christmas_crops_peppermint_seeds.png",
 		wield_image = "mesecraft_christmas_crops_peppermint_seeds.png",
@@ -87,7 +90,7 @@
 
 -- Ginger Root
 minetest.register_craftitem("mesecraft_christmas:ginger", {
-	description = "Ginger Root",
+	description = S("Ginger Root"),
 	inventory_image = "mesecraft_christmas_crops_ginger_root.png",
 	groups = {food_ginger = 1, flammable = 2},
 	on_use = minetest.item_eat(3),

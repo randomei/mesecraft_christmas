@@ -1,7 +1,10 @@
 local path = minetest.get_modpath("mesecraft_christmas")
+local S = minetest.get_translator("mesecraft_christmas")
 
 -- Initialize our namespace.
 mesecraft_christmas = {}
+
+mesecraft_christmas.translator = S
 
 -- Do these submodules.
 dofile(path .. "/bell.lua")

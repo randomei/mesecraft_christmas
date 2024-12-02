@@ -4,6 +4,8 @@
 -- Instructions: Uses item tables to determine what is common, rare, and special.
 -- farming, pie, dye, default, mesecraft_mobs, holiday lights, 
 
+local S = mesecraft_christmas.translator
+
 mesecraft_christmas.christmas_common_item_pool = {}
 mesecraft_christmas.christmas_uncommon_item_pool = {}
 mesecraft_christmas.christmas_special_item_pool = {}
@@ -21,7 +23,7 @@ mesecraft_christmas.christmas_special_item_pool = {}
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:sugar_cookie")
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:eggnog_glass")
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:hot_chocolate_glass")
-	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_mobs:milk_glass")
+	table.insert(mesecraft_christmas.christmas_common_item_pool, "mobs:glass_milk")
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:candy_cane_block")
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:gingerbread_block")
 	table.insert(mesecraft_christmas.christmas_common_item_pool, "mesecraft_christmas:icicles")
@@ -51,7 +53,7 @@ mesecraft_christmas.christmas_special_item_pool = {}
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "default:coal")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "default:pine_tree")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "farming:chocolate_dark")
-        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "pie:pie_0")
+        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "farming:apple_pie")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "farming:porridge")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:green_candy_cane")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:gingerbread")
@@ -59,7 +61,7 @@ mesecraft_christmas.christmas_special_item_pool = {}
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:sugar_cookie_star")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:sugar_cookie_tree")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:sugar_cookie_bell")
-        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_mobs:milk_bucket")
+        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mobs:bucket_milk")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:peppermint_seeds")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:ginger")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:green_candy_cane_block")
@@ -70,9 +72,6 @@ mesecraft_christmas.christmas_special_item_pool = {}
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:painting_03")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_christmas:painting_05")
         table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "farming:blueberry_pie")
-        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "gramophone:vinyl_disc10")
-        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "gramophone:vinyl_disc11")
-        table.insert(mesecraft_christmas.christmas_uncommon_item_pool, "mesecraft_rainbow_block:mesecraft_rainbow_block")
 
 -- Special Item Pool
         table.insert(mesecraft_christmas.christmas_special_item_pool, "mesecraft_christmas:christmas_bell")
@@ -98,55 +97,68 @@ mesecraft_christmas.christmas_special_item_pool = {}
         table.insert(mesecraft_christmas.christmas_special_item_pool, "mesecraft_christmas:candy_cane_pickaxe")
         table.insert(mesecraft_christmas.christmas_special_item_pool, "mesecraft_christmas:candy_cane_axe")
         table.insert(mesecraft_christmas.christmas_special_item_pool, "mesecraft_christmas:candy_cane_sword")
-        table.insert(mesecraft_christmas.christmas_special_item_pool, "gramophone:vinyl_disc12")
-        table.insert(mesecraft_christmas.christmas_special_item_pool, "gramophone:vinyl_disc13")
 
 
 -- Register Presents (3 tiers: 3 commons, 2 uncommon, 2 special)
 
+	present_desc_1 = S("Christmas Present\n")
+	present_desc_2 = S("Wonder what's inside?")
 	-- Common Tier
+	local temp_desc_1 = present_desc_1:gsub("\n", "<BR>")
+	local colored_description = "" ..core.colorize("#35cdff", temp_desc_1) .. 
+                             core.colorize("#FFFFFF", present_desc_2)
+	colored_description = colored_description:gsub("<BR>", "\n")
+
 	minetest.register_craftitem("mesecraft_christmas:present_01", {
-		description = "" ..core.colorize("#35cdff","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+		description = colored_description,
 		inventory_image = "mesecraft_christmas_present_01.png",
 		on_use = mesecraft_christmas.open_present("christmas_common"),
 	})
 
 	minetest.register_craftitem("mesecraft_christmas:present_02", {
-		description = "" ..core.colorize("#35cdff","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+		description = colored_description,
 	        inventory_image = "mesecraft_christmas_present_02.png",
 	        on_use = mesecraft_christmas.open_present("christmas_common"),
 	})
 
 	minetest.register_craftitem("mesecraft_christmas:present_03", {
-		description = "" ..core.colorize("#35cdff","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+		description = colored_description,
 	        inventory_image = "mesecraft_christmas_present_03.png",
 	        on_use = mesecraft_christmas.open_present("christmas_common"),
 	})
 
 	-- Uncommon Tier
+	
+	colored_description = "" ..core.colorize("#146b3a", temp_desc_1) .. 
+                             core.colorize("#FFFFFF", present_desc_2)
+	colored_description = colored_description:gsub("<BR>", "\n")
 
 	minetest.register_craftitem("mesecraft_christmas:present_04", {
-                description = "" ..core.colorize("#146b3a","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+                description = colored_description,
 	        inventory_image = "mesecraft_christmas_present_04.png",
 	        on_use = mesecraft_christmas.open_present("christmas_uncommon"),
 	})
 
         minetest.register_craftitem("mesecraft_christmas:present_05", {
-                description = "" ..core.colorize("#146b3a","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+                description = colored_description,
                 inventory_image = "mesecraft_christmas_present_05.png",
                 on_use = mesecraft_christmas.open_present("christmas_uncommon"),
         })
 
 	-- Special Tier
+	
+	colored_description = "" ..core.colorize("#bb2528", temp_desc_1) .. 
+                             core.colorize("#FFFFFF", present_desc_2)
+	colored_description = colored_description:gsub("<BR>", "\n")
 
         minetest.register_craftitem("mesecraft_christmas:present_06", {
-                description = "" ..core.colorize("#bb2528","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+                description = colored_description,
                 inventory_image = "mesecraft_christmas_present_06.png",
                 on_use = mesecraft_christmas.open_present("christmas_special"),
         })
 
         minetest.register_craftitem("mesecraft_christmas:present_07", {
-                description = "" ..core.colorize("#bb2528","Christmas Present\n") ..core.colorize("#FFFFFF", "Wonder what's inside?"),
+                description = colored_description,
                 inventory_image = "mesecraft_christmas_present_07.png",
                 on_use = mesecraft_christmas.open_present("christmas_special"),
         })

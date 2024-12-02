@@ -47,7 +47,7 @@
 		view_range = 15,
 		fear_height = 3,
 		on_rightclick = function(self, clicker)
-	                mobs_trader(self, clicker, entity, mesecraft_christmas.reindeer)
+	                mobs_npc.shop_trade(self, clicker, mesecraft_christmas.reindeer)
        		end,
                 on_spawn = function(self)
                         self.nametag = "Santa's Reindeer"

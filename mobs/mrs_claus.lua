@@ -51,7 +51,7 @@ mobs:register_mob("mesecraft_christmas:mrs_claus", {
 	                punch_end = 219,
 	        },
 		        on_rightclick = function(self, clicker)
-            		   mobs_trader(self, clicker, entity, mesecraft_christmas.mrs_claus)
+            		   mobs_npc.shop_trade(self, clicker, mesecraft_christmas.mrs_claus)
 		end,
 	        on_spawn = function(self)
 	                self.nametag = "Mrs Claus"
@@ -95,8 +95,8 @@ mesecraft_christmas.mrs_claus = {
 	names = { "Mrs Claus" },
 	items = {
                 --{item for sale, price, chance of appearing in trader's inventory}
-		{"mesecraft_mobs:milk_glass 1", "default:coal_lump 1", 1},
-		{"mesecraft_mobs:milk_glass 1", "default:coal_lump 1", 1},
+		{"mobs:glass_milk 1", "default:coal_lump 1", 1},
+		{"mobs:glass_milk 1", "default:coal_lump 1", 1},
 		{"mesecraft_christmas:sugar_cookie 1", "default:coal_lump 1", 1},
 		{"mesecraft_christmas:sugar_cookie_bell 1", "default:coal_lump 1", 1},
 		{"mesecraft_christmas:sugar_cookie_star 1", "default:coal_lump 1", 1},

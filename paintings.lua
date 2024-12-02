@@ -1,6 +1,9 @@
 -- Christmas Tree Painting (64x48)
+
+local S = mesecraft_christmas.translator
+
 minetest.register_node("mesecraft_christmas:painting_01", {
-                description = "Christmas Tree Painting",
+                description = S("Christmas Tree Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_01.png"},
                 inventory_image = "mesecraft_christmas_painting_01.png",
@@ -24,7 +27,7 @@ minetest.register_node("mesecraft_christmas:painting_01", {
 
 -- Santa Christmas Painting (64x64)
 minetest.register_node("mesecraft_christmas:painting_02", {
-                description = "Santa Claus Painting",
+                description = S("Santa Claus Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_02.png"},
                 inventory_image = "mesecraft_christmas_painting_02.png",
@@ -48,7 +51,7 @@ minetest.register_node("mesecraft_christmas:painting_02", {
 
 -- Snowman Christmas Painting (64x64)
 minetest.register_node("mesecraft_christmas:painting_03", {
-                description = "Snowman Painting",
+                description = S("Snowman Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_03.png"},
                 inventory_image = "mesecraft_christmas_painting_03.png",
@@ -71,7 +74,7 @@ minetest.register_node("mesecraft_christmas:painting_03", {
         })
 -- Christmas Tree Painting (64x32)
 minetest.register_node("mesecraft_christmas:painting_04", {
-                description = "Christmas Cabin Landscape Painting",
+                description = S("Christmas Cabin Landscape Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_04.png"},
                 inventory_image = "mesecraft_christmas_painting_04.png",
@@ -95,7 +98,7 @@ minetest.register_node("mesecraft_christmas:painting_04", {
 
 -- Mountainous Winter Landscape Painting (64x32)
 minetest.register_node("mesecraft_christmas:painting_05", {
-                description = "Mountainous Winter Landscape Painting",
+                description = S("Mountainous Winter Landscape Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_05.png"},
                 inventory_image = "mesecraft_christmas_painting_05.png",
@@ -119,7 +122,7 @@ minetest.register_node("mesecraft_christmas:painting_05", {
 
 -- Winter Horseback Riding Painting (64x48)
 minetest.register_node("mesecraft_christmas:painting_06", {
-                description = "Winter Horseback Riding Painting",
+                description = S("Winter Horseback Riding Painting"),
                 drawtype = "nodebox",
                 tiles = {"mesecraft_christmas_painting_06.png"},
                 inventory_image = "mesecraft_christmas_painting_06.png",

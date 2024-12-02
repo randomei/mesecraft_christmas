@@ -1,5 +1,8 @@
 -- Stocking Stuffing Code.
 -- Primarily based on GreenXenith's code from christmas_decor mod. Minor changes such as items and nodetype.
+
+local S = mesecraft_christmas.translator
+
 local stocking = {}
 local stuffer = {}
 stuffer.stuffers = {}
@@ -124,7 +127,7 @@ check_fillable = function(pos)
 end,
 
 minetest.register_node("mesecraft_christmas:stocking", {
-	description = "Stocking",
+	description = S("Stocking"),
 	drawtype = "signlike",
 	tiles = {"mesecraft_christmas_stocking.png"},
 	inventory_image = "mesecraft_christmas_stocking.png",
@@ -139,13 +142,13 @@ minetest.register_node("mesecraft_christmas:stocking", {
 	sounds = default.node_sound_leaves_defaults(),
 	allow_metadata_inventory_put = function(pos, listname, index, stack, player)
 		if player then
-			minetest.chat_send_player(player:get_player_name(), "Wait until Christmas Eve for Santa to fill your stocking!")
+			minetest.chat_send_player(player:get_player_name(), S("Wait until Christmas Eve for Santa to fill your stocking!"))
 			return 0
 		end
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		if minetest.is_yes(placer:get_attribute("has_placed_stocking")) then
-			minetest.chat_send_player(placer:get_player_name(), "Santa won't fill more than one stocking!")
+			minetest.chat_send_player(placer:get_player_name(), S("Santa won't fill more than one stocking!"))
 			return itemstack
 		else
 			return minetest.item_place(itemstack, placer, pointed_thing)
@@ -155,7 +158,7 @@ minetest.register_node("mesecraft_christmas:stocking", {
 		local meta = minetest.get_meta(pos)
 		local owner = placer:get_player_name()
 		meta:set_string("owner", owner)
-		meta:set_string("infotext", owner.."'s Stocking")
+		meta:set_string("infotext", owner..S("'s Stocking"))
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*2)
 		placer:set_attribute("has_placed_stocking", "true")
@@ -200,15 +203,15 @@ minetest.register_node("mesecraft_christmas:stocking", {
 	on_metadata_inventory_move = function(pos, from_list, from_index,
 			to_list, to_index, count, player)
 		minetest.log("action", player:get_player_name() ..
-			" moves stuff in stocking at " .. minetest.pos_to_string(pos))
+			S(" moves stuff in stocking at ") .. minetest.pos_to_string(pos))
 	end,
     on_metadata_inventory_put = function(pos, listname, index, stack, player)
 		minetest.log("action", player:get_player_name() ..
-			" moves stuff to stocking at " .. minetest.pos_to_string(pos))
+			S(" moves stuff to stocking at ") .. minetest.pos_to_string(pos))
 	end,
     on_metadata_inventory_take = function(pos, listname, index, stack, player)
 		minetest.log("action", player:get_player_name() ..
-			" takes stuff from stocking at " .. minetest.pos_to_string(pos))
+			S(" takes stuff from stocking at ") .. minetest.pos_to_string(pos))
 	end,
 	on_dig = function(pos, node, digger)
 		local meta = minetest.get_meta(pos)
@@ -225,7 +228,7 @@ minetest.register_node("mesecraft_christmas:stocking", {
 })
 -- Green Stocking
 minetest.register_node("mesecraft_christmas:green_stocking", {
-	description = "Green Stocking",
+	description = S("Green Stocking"),
 	drawtype = "signlike",
 	tiles = {"mesecraft_christmas_green_stocking.png"},
 	inventory_image = "mesecraft_christmas_green_stocking.png",
@@ -240,13 +243,13 @@ minetest.register_node("mesecraft_christmas:green_stocking", {
 	sounds = default.node_sound_leaves_defaults(),
 	allow_metadata_inventory_put = function(pos, listname, index, stack, player)
 		if player then
-			minetest.chat_send_player(player:get_player_name(), "Wait until Christmas Eve for Santa to fill your stocking!")
+			minetest.chat_send_player(player:get_player_name(), S("Wait until Christmas Eve for Santa to fill your stocking!"))
 			return 0
 		end
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		if minetest.is_yes(placer:get_attribute("has_placed_stocking")) then
-			minetest.chat_send_player(placer:get_player_name(), "Santa won't fill more than one stocking!")
+			minetest.chat_send_player(placer:get_player_name(), S("Santa won't fill more than one stocking!"))
 			return itemstack
 		else
 			return minetest.item_place(itemstack, placer, pointed_thing)
@@ -256,7 +259,7 @@ minetest.register_node("mesecraft_christmas:green_stocking", {
 		local meta = minetest.get_meta(pos)
 		local owner = placer:get_player_name()
 		meta:set_string("owner", owner)
-		meta:set_string("infotext", owner.."'s Stocking")
+		meta:set_string("infotext", owner..S("'s Stocking"))
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*2)
 		placer:set_attribute("has_placed_stocking", "true")
@@ -301,15 +304,15 @@ minetest.register_node("mesecraft_christmas:green_stocking", {
 	on_metadata_inventory_move = function(pos, from_list, from_index,
 			to_list, to_index, count, player)
 		minetest.log("action", player:get_player_name() ..
-			" moves stuff in stocking at " .. minetest.pos_to_string(pos))
+			S(" moves stuff in stocking at ") .. minetest.pos_to_string(pos))
 	end,
     on_metadata_inventory_put = function(pos, listname, index, stack, player)
 		minetest.log("action", player:get_player_name() ..
-			" moves stuff to stocking at " .. minetest.pos_to_string(pos))
+			S(" moves stuff to stocking at ") .. minetest.pos_to_string(pos))
 	end,
     on_metadata_inventory_take = function(pos, listname, index, stack, player)
 		minetest.log("action", player:get_player_name() ..
-			" takes stuff from stocking at " .. minetest.pos_to_string(pos))
+			S(" takes stuff from stocking at ") .. minetest.pos_to_string(pos))
 	end,
 	on_dig = function(pos, node, digger)
 		local meta = minetest.get_meta(pos)

@@ -32,7 +32,7 @@ mobs:register_mob('mesecraft_christmas:crampus_claus', {
 	view_range = 16,
 	drops = {
 	{name = "mesecraft_mobs:rotten_flesh", chance = 1, min = 0, max = 1},
-	{name = "mesecraft_mobs:bone", chance = 2, min = 0, max = 1},
+	{name = "bonemeal:bone", chance = 2, min = 0, max = 1},
 	{name = "default:gold_ingot", chance = 8, min = 1, max = 1},
 	},
 	lava_damage = 5,

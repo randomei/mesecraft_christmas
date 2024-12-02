@@ -1,6 +1,8 @@
+local S = mesecraft_christmas.translator
+
 --Register Candy Cane Pickaxe
 minetest.register_tool("mesecraft_christmas:candy_cane_pickaxe", {
-	description = "Candy Cane Pickaxe",
+	description = S("Candy Cane Pickaxe"),
 	inventory_image = "mesecraft_christmas_candy_cane_pickaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
@@ -14,7 +16,7 @@ minetest.register_tool("mesecraft_christmas:candy_cane_pickaxe", {
 
 --Register Candy Cane Axe
 minetest.register_tool("mesecraft_christmas:candy_cane_axe", {
-	description = "Candy Cane Axe",
+	description = S("Candy Cane Axe"),
 	inventory_image = "mesecraft_christmas_candy_cane_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
@@ -28,7 +30,7 @@ minetest.register_tool("mesecraft_christmas:candy_cane_axe", {
 
 --Register Candy Cane Sword
 minetest.register_tool("mesecraft_christmas:candy_cane_sword", {
-	description = "Candy Cane Sword",
+	description = S("Candy Cane Sword"),
 	inventory_image = "mesecraft_christmas_candy_cane_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.7,
@@ -50,7 +52,7 @@ if minetest.get_modpath("toolranks") then
 			after_use = afteruse and toolranks.new_afteruse
 		})
 	end
-	add_tool("mesecraft_christmas:candy_cane_pickaxe", "Candy Cane Pickaxe", true)
-	add_tool("mesecraft_christmas:candy_cane_axe", "Candy Cane Axe", true)
-	add_tool("mesecraft_christmas:candy_cane_sword", "Candy Cane Sword", true)
+	add_tool("mesecraft_christmas:candy_cane_pickaxe", S("Candy Cane Pickaxe"), true)
+	add_tool("mesecraft_christmas:candy_cane_axe", S("Candy Cane Axe"), true)
+	add_tool("mesecraft_christmas:candy_cane_sword", S("Candy Cane Sword"), true)
 end

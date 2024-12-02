@@ -1,9 +1,11 @@
 -- Christmas Holiday Pack by FreeGamers.org
 
+local S = mesecraft_christmas.translator
+
 -- MAIN NODES
 	-- Candy Cane Block
 	minetest.register_node("mesecraft_christmas:candy_cane_block", {
-		description = "Candy Cane Block",
+		description = S("Candy Cane Block"),
 		tiles = {"mesecraft_christmas_nodes_candy_cane_block.png", "mesecraft_christmas_nodes_candy_cane_block.png", "mesecraft_christmas_nodes_candy_cane_block.png", "mesecraft_christmas_nodes_candy_cane_block.png", "mesecraft_christmas_nodes_candy_cane_block.png^[transformFX", "mesecraft_christmas_nodes_candy_cane_block.png^[transformFX"},
 		paramtype2 = "facedir",
 		groups = {snappy = 3, oddly_breakable_by_hand = 3},
@@ -12,7 +14,7 @@
 
 	-- Green Candy Cane Block
 	minetest.register_node("mesecraft_christmas:green_candy_cane_block", {
-	        description = "Green Candy Cane Block",
+	        description = S("Green Candy Cane Block"),
 	        tiles = {"mesecraft_christmas_nodes_green_candy_cane_block.png", "mesecraft_christmas_nodes_green_candy_cane_block.png", "mesecraft_christmas_nodes_green_candy_cane_block.png", "mesecraft_christmas_nodes_green_candy_cane_block.png", "mesecraft_christmas_nodes_green_candy_cane_block.png^[transformFX", "mesecraft_christmas_nodes_green_candy_cane_block.png^[transformFX"},
 	        paramtype2 = "facedir",
 	        groups = {snappy = 3, oddly_breakable_by_hand = 3},
@@ -21,7 +23,7 @@
 
 	-- Gingerbread Block
 	minetest.register_node("mesecraft_christmas:gingerbread_block", {
-	        description = "Gingerbread Block",
+	        description = S("Gingerbread Block"),
 	        tiles = {"mesecraft_christmas_nodes_gingerbread_block.png", "mesecraft_christmas_nodes_gingerbread_block.png", "mesecraft_christmas_nodes_gingerbread_block.png", "mesecraft_christmas_nodes_gingerbread_block.png", "mesecraft_christmas_nodes_gingerbread_block.png^[transformFX", "mesecraft_christmas_nodes_gingerbread_block.png^[transformFX"},
 	        paramtype2 = "facedir",
 	        groups = {snappy = 3, choppy = 2, oddly_breakable_by_hand = 2},
@@ -29,7 +31,7 @@
 	})
 	-- Frosting Block
 	minetest.register_node("mesecraft_christmas:frosting_block", {
-		description = "Frosting Block",
+		description = S("Frosting Block"),
 		tiles = {"mesecraft_christmas_nodes_frosting_block.png"},
 		paramtype2 = "facedir",
 		groups = {snappy = 3},
@@ -40,28 +42,28 @@
 if minetest.get_modpath("moreblocks") then
         stairsplus:register_all(
 	                "mesecraft_christmas", "candy_cane_block", "mesecraft_christmas:candy_cane_block", {
-                        description = "Candy Cane Block",
+                        description = S("Candy Cane Block"),
                         groups = {snappy = 3, oddly_breakable_by_hand = 3},
                         tiles = {"mesecraft_christmas_nodes_candy_cane_block.png"},
                         sounds = default.node_sound_glass_defaults(),
         })
 	stairsplus:register_all(
 	                "mesecraft_christmas", "green_candy_cane_block", "mesecraft_christmas:green_candy_cane_block", {
-                        description = "Green Candy Cane Block",
+                        description = S("Green Candy Cane Block"),
                         groups = {snappy = 3, oddly_breakable_by_hand = 3},
                         tiles = {"mesecraft_christmas_nodes_green_candy_cane_block.png"},
                         sounds = default.node_sound_glass_defaults(),
         })
 	stairsplus:register_all(
                         "mesecraft_christmas", "gingerbread_block", "mesecraft_christmas:gingerbread_block", {
-                        description = "Gingerbread Block",
+                        description = S("Gingerbread Block"),
                         groups = {snappy = 3, choppy = 2, oddly_breakable_by_hand = 2},
                         tiles = {"mesecraft_christmas_nodes_gingerbread_block.png"},
                         sounds = default.node_sound_wood_defaults(),
         })
         stairsplus:register_all(
           		"mesecraft_christmas", "frosting_block", "mesecraft_christmas:frosting_block", {
-                        description = "Frosting",
+                        description = S("Frosting"),
                         groups = {snappy = 3},
                         tiles = {"mesecraft_christmas_nodes_frosting_block.png"},
                         sounds = default.node_sound_stone_defaults(),
@@ -72,7 +74,7 @@ end
 
 	-- Mistletoe
 	minetest.register_node("mesecraft_christmas:mistletoe", {
-	        description = "Mistletoe",
+	        description = S("Mistletoe"),
 	        tiles = {"mesecraft_christmas_nodes_mistletoe.png"},
 	        drawtype = "plantlike",
 	        walkable = false,
@@ -84,7 +86,7 @@ end
 
 	-- Christmas Reef
 	minetest.register_node("mesecraft_christmas:reef", {
-	        description = "Christmas Reef",
+	        description = S("Christmas Reef"),
 	        tiles = {"mesecraft_christmas_nodes_reef.png"},
 	        inventory_image = "mesecraft_christmas_nodes_reef.png",
 	        wield_image = "mesecraft_christmas_nodes_reef.png",
@@ -106,7 +108,7 @@ end
 
 	-- Icicles
 	minetest.register_node("mesecraft_christmas:icicles", {
-	        description = "Icicles",
+	        description = S("Icicles"),
 	        tiles = {"mesecraft_christmas_nodes_icicles.png"},
 	        inventory_image = "mesecraft_christmas_nodes_icicles.png",
 	        wield_image = "mesecraft_christmas_nodes_icicles.png",
@@ -128,7 +130,7 @@ end
 
 	-- Christmas Tree Star
 	minetest.register_node("mesecraft_christmas:christmas_star", {
-	        description = "Christmas Star",
+	        description = S("Christmas Star"),
 	        tiles = {"mesecraft_christmas_nodes_christmas_star.png"},
 	        drawtype = "plantlike",
 	        walkable = false,
@@ -140,7 +142,7 @@ end
 	})
 	-- Garland
 	minetest.register_node("mesecraft_christmas:garland", {
-		description = "Garland",
+		description = S("Garland"),
 		tiles = {"mesecraft_christmas_nodes_garland_green.png"},
 		inventory_image = "mesecraft_christmas_nodes_garland_green.png",
 		wield_image = "mesecraft_christmas_nodes_garland_green.png",
@@ -161,7 +163,7 @@ end
 	})
 	-- Festive Garland
 	minetest.register_node("mesecraft_christmas:festive_garland", {
-		description = "Festive Garland",
+		description = S("Festive Garland"),
 		tiles = {"mesecraft_christmas_nodes_garland.png"},
 		inventory_image = "mesecraft_christmas_nodes_garland.png",
 		wield_image = "mesecraft_christmas_nodes_garland.png",
@@ -182,7 +184,7 @@ end
 	})
 	-- Festive Garland with Lights
 	minetest.register_node("mesecraft_christmas:festive_garland_lights", {
-		description = "Festive Garland with Lights",
+		description = S("Festive Garland with Lights"),
 		tiles = {
 			{
 				image = "mesecraft_christmas_nodes_garland_lights.png",
@@ -215,7 +217,7 @@ end
 	})
         -- Red Garland
         minetest.register_node("mesecraft_christmas:garland_red", {
-                description = "Red Garland",
+                description = S("Red Garland"),
                 tiles = {"mesecraft_christmas_nodes_garland_red.png"},
                 inventory_image = "mesecraft_christmas_nodes_garland_red.png",
                 wield_image = "mesecraft_christmas_nodes_garland_red.png",
@@ -236,7 +238,7 @@ end
         })
         -- Yellow Garland
         minetest.register_node("mesecraft_christmas:garland_yellow", {
-                description = "Yellow Garland",
+                description = S("Yellow Garland"),
                 tiles = {"mesecraft_christmas_nodes_garland_yellow.png"},
                 inventory_image = "mesecraft_christmas_nodes_garland_yellow.png",
                 wield_image = "mesecraft_christmas_nodes_garland_yellow.png",
@@ -257,7 +259,7 @@ end
         })
         -- White Garland
         minetest.register_node("mesecraft_christmas:garland_white", {
-                description = "White Garland",
+                description = S("White Garland"),
                 tiles = {"mesecraft_christmas_nodes_garland_white.png"},
                 inventory_image = "mesecraft_christmas_nodes_garland_white.png",
                 wield_image = "mesecraft_christmas_nodes_garland_white.png",
@@ -281,7 +283,7 @@ end
 	        -- 
 	-- White Ornament
 	minetest.register_node("mesecraft_christmas:ornament_white", {
-	        description = "White Christmas Ornament",
+	        description = S("White Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_white.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_white.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_white.png",
@@ -302,7 +304,7 @@ end
 	})
 	-- Yellow Ornament
 	minetest.register_node("mesecraft_christmas:ornament_yellow", {
-	        description = "Yellow Christmas Ornament",
+	        description = S("Yellow Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_yellow.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_yellow.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_yellow.png",
@@ -323,7 +325,7 @@ end
 	})
 	-- Red Ornament
 	minetest.register_node("mesecraft_christmas:ornament_red", {
-	        description = "Red Christmas Ornament",
+	        description = S("Red Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_red.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_red.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_red.png",
@@ -344,7 +346,7 @@ end
 	})
 	-- Green Ornament
 	minetest.register_node("mesecraft_christmas:ornament_green", {
-	        description = "Green Christmas Ornament",
+	        description = S("Green Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_green.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_green.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_green.png",
@@ -365,7 +367,7 @@ end
 	})
 	-- Blue Ornament
 	minetest.register_node("mesecraft_christmas:ornament_blue", {
-	        description = "Blue Christmas Ornament",
+	        description = S("Blue Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_blue.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_blue.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_blue.png",
@@ -386,7 +388,7 @@ end
 	})
 	-- Orange Ornament
 	minetest.register_node("mesecraft_christmas:ornament_orange", {
-	        description = "Orange Christmas Ornament",
+	        description = S("Orange Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_orange.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_orange.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_orange.png",
@@ -407,7 +409,7 @@ end
 	})
 	-- Purple Ornament
 	minetest.register_node("mesecraft_christmas:ornament_purple", {
-	        description = "Purple Christmas Ornament",
+	        description = S("Purple Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_purple.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_purple.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_purple.png",
@@ -428,7 +430,7 @@ end
 	})
 	-- Pink Ornament
 	minetest.register_node("mesecraft_christmas:ornament_pink", {
-	        description = "Pink Christmas Ornament",
+	        description = S("Pink Christmas Ornament"),
 	        tiles = {"mesecraft_christmas_nodes_ornament_pink.png"},
 	        inventory_image = "mesecraft_christmas_nodes_ornament_pink.png",
 	        wield_image = "mesecraft_christmas_nodes_ornament_pink.png",

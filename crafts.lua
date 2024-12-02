@@ -44,7 +44,7 @@
                 output = "mesecraft_christmas:frosting_block 3",
                 recipe = {
                         {"group:food_sugar", "group:food_sugar", "group:food_sugar"},
-                        {"group:food_sugar", "mesecraft_mobs:milk_bucket", "group:food_sugar"},
+                        {"group:food_sugar", "mobs:bucket_milk", "group:food_sugar"},
                         {"group:food_sugar", "group:food_sugar", "group:food_sugar"},
 		},
 		replacements = {{"mesecraft_mobs:milk_bucket", "bucket:bucket_empty"}},
@@ -197,7 +197,7 @@ minetest.register_craft({
 minetest.register_craft({
         output = "mesecraft_christmas:gingerbread_dough",
         type = "shapeless",
-        recipe = {"mesecraft_christmas:ginger","mesecraft_christmas:ginger","group:food_flour", "group:food_flour", "group:food_sugar", "group:food_egg", "mesecraft_mobs:butter", "farming:mortar_pestle"},
+        recipe = {"mesecraft_christmas:ginger","mesecraft_christmas:ginger","group:food_flour", "group:food_flour", "group:food_sugar", "group:food_egg", "mobs:butter", "farming:mortar_pestle"},
         replacements = {{"farming:mortar_pestle", "farming:mortar_pestle"}},
 })
 -- Gingerbread Cooking Recipe
@@ -214,25 +214,25 @@ minetest.register_craft({
 minetest.register_craft({
         output = "mesecraft_christmas:sugar_cookie 6",
         type = "shapeless",
-        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mesecraft_mobs:butter"},
+        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mobs:butter"},
 })
 -- Bell Sugar Cookie
 minetest.register_craft({
         output = "mesecraft_christmas:sugar_cookie_bell 4",
         type = "shapeless",
-        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mesecraft_mobs:butter", "dye:blue"},
+        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mobs:butter", "dye:blue"},
 })
 -- Star Sugar Cookie
 minetest.register_craft({
         output = "mesecraft_christmas:sugar_cookie_star 4",
         type = "shapeless",
-        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mesecraft_mobs:butter", "dye:red"},
+        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mobs:butter", "dye:red"},
 })
 -- Tree Sugar Cookie
 minetest.register_craft({
         output = "mesecraft_christmas:sugar_cookie_tree 4",
         type = "shapeless",
-        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mesecraft_mobs:butter", "dye:green"},
+        recipe = {"group:food_flour","group:food_flour", "group:food_sugar", "group:food_sugar", "group:food_egg", "mobs:butter", "dye:green"},
 })
 -- Glass of Hot Chocolate
 -- SKIPPED

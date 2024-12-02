@@ -1,6 +1,8 @@
 -- Add Christmas Costumes.(Requires 3d Armor Mod by Stu)
 -- Mostly based on the costumes submodule in the mod "halloween" by GreenDiamond.
 
+local S = mesecraft_christmas.translator
+
 -- Function for registering suits
 function mesecraft_christmas.register(costume, nodename, def)
 	if not def then
@@ -57,28 +59,28 @@ function mesecraft_christmas.register(costume, nodename, def)
 end
 
 -- Register Costumes
-mesecraft_christmas.register("Orange Parka", "orange_parka")
-mesecraft_christmas.register("Christmas Elf Costume", "elf")
-mesecraft_christmas.register("Christmas Tree Costume", "tree")
-mesecraft_christmas.register("Santa Claus Costume", "santa")
+mesecraft_christmas.register(S("Orange Parka"), "orange_parka")
+mesecraft_christmas.register(S("Christmas Elf Costume"), "elf")
+mesecraft_christmas.register(S("Christmas Tree Costume"), "tree")
+mesecraft_christmas.register(S("Santa Claus Costume"), "santa")
 
 -- Register Ugly Sweater
-mesecraft_christmas.register("Ugly Christmas Sweater", "ugly_sweater", {
+mesecraft_christmas.register(S("Ugly Christmas Sweater"), "ugly_sweater", {
 	type = "shirt",
 	preview = "((([combine:16x32:-28,-12=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_chest.png)^([combine:16x32:-36,-8=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_head.png)^([combine:16x32:-52,-12=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_arm.png^[transformFX)^([combine:16x32:-52,-12=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_arm.png)^([combine:16x32:4,0=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_leg.png^[transformFX)^([combine:16x32:4,0=mesecraft_christmas_shirt_ugly_sweater.png^[mask:mask_leg.png))^[resize:32x64)^[mask:mask_preview.png"
 })
 -- Register Santa Hat
-mesecraft_christmas.register("Santa Hat", "santa_hat", {
+mesecraft_christmas.register(S("Santa Hat"), "santa_hat", {
 	type = "mask",
 	preview = "((([combine:16x32:-16,-12=mesecraft_christmas_mask_santa_hat.png^[mask:mask_chest.png)^([combine:16x32:-36,-8=mesecraft_christmas_mask_santa_hat.png^[mask:mask_head.png)^([combine:16x32:-44,-12=mesecraft_christmas_mask_santa_hat.png^[mask:mask_arm.png^[transformFX)^([combine:16x32:-44,-12=mesecraft_christmas_mask_santa_hat.png^[mask:mask_arm.png)^([combine:16x32:4,0=mesecraft_christmas_mask_santa_hat.png^[mask:mask_leg.png^[transformFX)^([combine:16x32:4,0=mesecraft_christmas_mask_santa_hat.png^[mask:mask_leg.png))^[resize:32x64)^[mask:mask_preview.png"
 })
 -- Register Green Santa Hat
-mesecraft_christmas.register("Green Chritmas Hat", "green_santa_hat", {
+mesecraft_christmas.register(S("Green Chritmas Hat"), "green_santa_hat", {
 	type = "mask",
 	preview = "((([combine:16x32:-16,-12=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_chest.png)^([combine:16x32:-36,-8=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_head.png)^([combine:16x32:-44,-12=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_arm.png^[transformFX)^([combine:16x32:-44,-12=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_arm.png)^([combine:16x32:4,0=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_leg.png^[transformFX)^([combine:16x32:4,0=mesecraft_christmas_mask_green_santa_hat.png^[mask:mask_leg.png))^[resize:32x64)^[mask:mask_preview.png"
 })
 -- Register Red Poof Ball Hat
-mesecraft_christmas.register("Red Poofball Hat", "red_poof_ball_hat", {
+mesecraft_christmas.register(S("Red Poofball Hat"), "red_poof_ball_hat", {
 	type = "mask",
 	preview = "((([combine:16x32:-16,-12=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_chest.png)^([combine:16x32:-36,-8=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_head.png)^([combine:16x32:-44,-12=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_arm.png^[transformFX)^([combine:16x32:-44,-12=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_arm.png)^([combine:16x32:4,0=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_leg.png^[transformFX)^([combine:16x32:4,0=mesecraft_christmas_mask_red_poof_ball_hat.png^[mask:mask_leg.png))^[resize:32x64)^[mask:mask_preview.png"
 })

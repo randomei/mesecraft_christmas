@@ -1,6 +1,8 @@
 -- Christmas Bell that rings every hour.
 -- Most of this code is from the "bell" mod.
 
+local S = mesecraft_christmas.translator
+
 mesecraft_christmas.bell_ring_interval = 3600; --60*60; -- ring each hour
 
 mesecraft_christmas.bell_save_file = minetest.get_worldpath().."/christmas_bell_positions.data";
@@ -84,7 +86,7 @@ mesecraft_christmas.restore_bell_data();
 
 
 minetest.register_node("mesecraft_christmas:christmas_bell", {
-    description = "Bell",
+    description = S("Bell"),
     node_placement_prediction = "",
 	tiles = {"mesecraft_christmas_nodes_bell.png"},
 	paramtype = "light",
